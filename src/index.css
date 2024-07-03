@@ -11,10 +11,14 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
-
+.wrapper {
+  min-width: 1200px;
+}
 :root{
   --accent-color: rgba(1, 158, 221, 1);
 }
+
+/* haeder */
 
 header .logo {
   font-weight: 400;
@@ -22,8 +26,12 @@ header .logo {
   font-size: 14px;
   margin-left: 150px;
   color: white;
+  display: inline;
+  cursor: pointer;
 }
-
+header .logo:hover{
+  opacity: 0.5;
+}
 header .header__titel{
   background-color: var(--accent-color);
   height: 100px;
@@ -33,11 +41,30 @@ header .header__titel{
   padding: 10px;
 }
 
+header ul.nav {
+  list-style: none;
+  /* float: right; */
+  color: white;
+  margin-right: 800px;
+}
+header ul.nav li {
+  display: inline;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+header ul.nav li:hover {
+  opacity: 0.5;
+}
+
+/* main */
 .presentation {
   margin: 1px 0px;
   background-color: var(--accent-color);
   height: 500px;
 }
+
+/* footer */
 
 footer {
   background-color: var(--accent-color);
