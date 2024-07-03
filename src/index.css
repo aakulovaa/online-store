@@ -43,7 +43,6 @@ header .header__titel{
 
 header ul.nav {
   list-style: none;
-  /* float: right; */
   color: white;
   margin-right: 800px;
 }
