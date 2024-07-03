@@ -11,9 +11,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
-/* .wrapper {
-  width: 1280px;
-} */
+
 :root{
   --accent-color: rgba(1, 158, 221, 1);
 }
@@ -76,8 +74,8 @@ header .presentation {
 header .presentation::after {
   content: 'мы -- интернет-магазин оргтехники';
   position: absolute;
-  top: 200px;
-  left: 150px;
+  padding-top: 50px;
+  padding-left: 150px;
   width: 600px;
   font-weight: 600;
   font-size: 48px;
@@ -88,8 +86,8 @@ header .presentation::after {
 header .presentation::before {
   content: 'orgtex';
   position: absolute;
-  top: 450px;
-  left: 815px;
+  padding-top: 380px;
+  padding-left: 815px;
   width: 600px;
   font-weight: 600;
   font-size: 48px;
