@@ -67,10 +67,35 @@ header .profile:hover{
 }
 
 /* main */
-.presentation {
+header .presentation {
   margin: 1px 0px;
   background-color: var(--accent-color);
   height: 500px;
+  color: white;
+}
+header .presentation::after {
+  content: 'мы -- интернет-магазин оргтехники';
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  width: 600px;
+  font-weight: 600;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 65px;
+  letter-spacing: 15px;
+}
+header .presentation::before {
+  content: 'orgtex';
+  position: absolute;
+  top: 450px;
+  left: 815px;
+  width: 600px;
+  font-weight: 600;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 65px;
+  letter-spacing: 15px;
 }
 
 /* footer */
