@@ -11,9 +11,9 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
-.wrapper {
-  min-width: 1200px;
-}
+/* .wrapper {
+  width: 1280px;
+} */
 :root{
   --accent-color: rgba(1, 158, 221, 1);
 }
@@ -22,11 +22,9 @@ body {
 
 header .logo {
   font-weight: 400;
-  margin: 70px 150px auto;
   font-size: 14px;
   margin-left: 150px;
   color: white;
-  display: inline;
   cursor: pointer;
 }
 header .logo:hover{
@@ -42,9 +40,10 @@ header .header__titel{
 }
 
 header ul.nav {
+  font-size: 14px;
   list-style: none;
   color: white;
-  margin-right: 800px;
+  margin-right: 200px;
 }
 header ul.nav li {
   display: inline;
@@ -53,6 +52,17 @@ header ul.nav li {
 }
 
 header ul.nav li:hover {
+  opacity: 0.5;
+}
+
+header .profile {
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 150px;
+  color: white;
+  cursor: pointer;
+}
+header .profile:hover{
   opacity: 0.5;
 }
 
@@ -69,4 +79,17 @@ footer {
   background-color: var(--accent-color);
   height: 340px;
   color: white;
+  padding: 70px 150px;
 }
+
+footer .contacts__name {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+footer .footer__titel {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 32px;
+}
+

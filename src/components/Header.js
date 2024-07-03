@@ -7,22 +7,16 @@ export default function Header() {
             <div>
                 <span className='logo'>OrgTex</span>
             </div>
-            {/* <div>
-                <span className='logo'>Главная</span>
-            </div>
-            <div>
-                <span className='logo'>Каталог</span>
-            </div>
-            <div>
-                <span className='logo'>Корзина</span>
-            </div> */}
             <div>
                 <ul className='nav '>
                     <li>Главная</li>
                     <li>Каталог</li>
                     <li>Корзина</li>  
                 </ul>
-             </div>
+            </div>
+            <div>
+                <span className='profile'>Личный кабинет</span>
+            </div>
         </div>
         
         <div className='presentation'></div>
