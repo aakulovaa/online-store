@@ -17,6 +17,19 @@ export default function Footer() {
                 <span className='contacts__phone'>+7 (435) 324-54-65</span>
             </div>
         </div>
+        <div>
+            <ul className='socials'>
+                <li>
+                        <img src={"./img/socials-5.svg"}/>
+                </li>
+                <li>
+                        <img src={"./img/socials-6.svg"}/>
+                </li>
+                <li>
+                        <img src={"./img/socials-7.svg"}/>
+                </li>
+            </ul>
+        </div>
     </footer>
   )
 }

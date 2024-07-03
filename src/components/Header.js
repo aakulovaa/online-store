@@ -15,11 +15,12 @@ export default function Header() {
                 </ul>
             </div>
             <div>
-                <span className='profile'>Личный кабинет</span>
+                <span className='profile'><img src={"./img/logo.svg"}/></span>
             </div>
+            
         </div>
         
-        <div className='presentation'></div>
+        <div className='presentation'> </div>
     </header>
   )
 }
