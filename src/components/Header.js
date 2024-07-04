@@ -8,7 +8,7 @@ export default function Header() {
                 <span className='logo'>OrgTex</span>
             </div>
             <div>
-                <ul className='nav '>
+                <ul className='nav'>
                     <li>Главная</li>
                     <li>Каталог</li>
                     <li>Корзина</li>  
