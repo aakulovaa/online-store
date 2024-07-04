@@ -68,6 +68,7 @@ header .profile:hover{
   opacity: 0.5;
 }
 
+
 /* shop-cart */
 header .shop-card-btn:active {
   opacity: 0.5;
@@ -80,7 +81,8 @@ header .shop-cart {
   min-height: 100px;
   background: white;
   z-index: 1000;
-
+  height: 1700px;
+  width: 1000px;
   padding: 20px;
   padding-bottom: 0px;
 }
@@ -112,6 +114,18 @@ header .shop-cart .item b{
 header .shop-cart .empty {
   font-weight: 400;
   font-size: 14px;
+}
+
+header .shop-cart .item .delete-icon {
+  float: right;
+  position: relative;
+  top: -25px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+  transform: scale(1.5);
 }
 
 /* description */
