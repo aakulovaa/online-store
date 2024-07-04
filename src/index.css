@@ -57,20 +57,6 @@ header ul.nav li:hover {
   opacity: 0.5;
 }
 
-header .shop-card-btn:active {
-  opacity: 0.5;
-}
-
-header .shop-cart {
-  position: absolute;
-  top: 150px;
-  right: 0;
-  width: 1100px;
-  height: 500px;
-  min-height: 100px;
-  background: white;
-}
-
 header .profile {
   font-weight: 400;
   font-size: 14px;
@@ -80,6 +66,52 @@ header .profile {
 }
 header .profile:hover{
   opacity: 0.5;
+}
+
+/* shop-cart */
+header .shop-card-btn:active {
+  opacity: 0.5;
+}
+
+header .shop-cart {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  min-height: 100px;
+  background: white;
+  z-index: 1000;
+
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+header .shop-cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+header .shop-cart .item img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+header .shop-cart .item h2{
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+header .shop-cart .item b{
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+header .shop-cart .empty {
+  font-weight: 400;
+  font-size: 14px;
 }
 
 /* description */
