@@ -133,7 +133,7 @@ main .item img:hover {
 
 main h2,main p,main b {
   margin: 10px 20px;
-  color: #333;
+  color: dark;
 }
 
 main b{
@@ -149,7 +149,7 @@ main .add__to__cart{
   height: 35px;
   text-align: center;
   line-height: 35px;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 500ms ease;
