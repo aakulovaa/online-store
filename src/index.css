@@ -82,8 +82,9 @@ header .shop-cart {
   background: white;
   z-index: 1000;
   width: 100%;
-  padding: 20px;
+  padding: 70px 150px;
   padding-bottom: 0px;
+  
 }
 
 header .shop-cart .item {
@@ -132,11 +133,11 @@ header .shop-cart .item .delete-icon:hover {
 
 header .shop-cart .summa {
   float: left;
-  padding-left: 150px;
   width: 100%;
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding-top: 20px;
 }
 
 /* description */
