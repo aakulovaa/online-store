@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Header() {
+    let [cartOpen, setCartOpen] = useState(false)
+
   return (
     <header>
         <div className='header__titel'>
@@ -11,8 +13,14 @@ export default function Header() {
                 <ul className='nav'>
                     <li>Главная</li>
                     <li>Каталог</li>
-                    <li>Корзина</li>  
+                    <li onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-card-btn ${cartOpen && 'active'}`}>Корзина</li>  
                 </ul>
+                {cartOpen && (
+                    <div className='shop-cart'>
+                    </div>
+                )
+                }
+
             </div>
             <div>
                 <span className='profile'><img src={"./img/logo.svg"}/></span>
