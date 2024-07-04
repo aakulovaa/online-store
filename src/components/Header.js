@@ -6,6 +6,7 @@ const showOrders = (props) => {
     props.orders.forEach(el => summa += Number.parseInt(el.price))
     return (
         <div>
+        <div className='shop__cart__name'>Корзина</div>
             {props.orders.map(el => (
                             <Order onDelete={props.onDelete} key={el.id} item={el} />
             ))}
@@ -17,6 +18,7 @@ const showOrders = (props) => {
 const showNothing = () => {
     return (
     <div className='empty'>
+    <div className='shop__cart__name'>Корзина</div>
         <h2>Товаров нет</h2>
     </div>
     )
