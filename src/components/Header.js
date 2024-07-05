@@ -26,6 +26,7 @@ const showNothing = () => {
 
 export default function Header(props) {
     let [cartOpen, setCartOpen] = useState(false)
+    let [profileOpen, setProfileOpen] = useState(false)
 
   return (
     <header>
@@ -48,8 +49,20 @@ export default function Header(props) {
 
             </div>
             <div>
-                <span className='profile'><img src={"./img/logo.svg"}/></span>
+                <span onClick={() => setProfileOpen(profileOpen = !profileOpen)} className={`profile-btn ${cartOpen && 'active'}`}><img src={"./img/logo.svg"}/></span>
             </div>
+
+            {
+                profileOpen && (
+                    <div className='profile-nav-bar'>
+                        <ul className='profile-nav'>
+                            <li>Личный кабинет</li>
+                            <li>Поддержка</li>
+                            <li>Вход</li>  
+                        </ul>
+                    </div>
+                )
+            }
             
         </div>
         

@@ -57,16 +57,38 @@ header ul.nav li:hover {
   opacity: 0.5;
 }
 
-header .profile {
+header .profile-btn {
   font-weight: 400;
   font-size: 14px;
   margin-right: 150px;
   color: white;
   cursor: pointer;
 }
-header .profile:hover{
+header .profile-btn:hover{
   opacity: 0.5;
 }
+
+/* profile */
+header .profile-nav-bar {
+  position: absolute;
+  top: 150px;
+  right: 170px;
+  width: 200px;
+  min-height: 100px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+header ul.profile-nav {
+  list-style: none;
+  font-size: 14px;
+}
+header ul.profile-nav li {
+  margin: 10px 20px;
+}
+
 
 
 /* shop-cart */
