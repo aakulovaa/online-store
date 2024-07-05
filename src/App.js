@@ -80,7 +80,6 @@ class App extends React.Component {
       ],
       showFullItem: false,
       fullItem: {},
-      showLogIn: false,
     }
     // указание возможности ваимодействия с состоянием и this
     this.state.currentItems = this.state.items
@@ -88,7 +87,6 @@ class App extends React.Component {
     this.deleteOrder = this.deleteOrder.bind(this)
     this.chooseCategory = this.chooseCategory.bind(this)
     this.onShowItem = this.onShowItem.bind(this)
-    this.onShowLogIn = this.onShowLogIn.bind(this)
   }
   render() {
     return(
@@ -102,10 +100,6 @@ class App extends React.Component {
         <Footer />
       </div>
     )
-  }
-
-  onShowLogIn(){
-    this.setState({showLogIn: !this.state.showLogIn})
   }
 
   onShowItem(item){
