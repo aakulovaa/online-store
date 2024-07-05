@@ -83,8 +83,6 @@ header .shop-cart {
   z-index: 1000;
   width: 100%;
   padding: 70px 150px;
-  padding-bottom: 0px;
-  
 }
 
 header .shop-cart .item {
