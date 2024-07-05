@@ -69,26 +69,28 @@ header .profile-btn:hover{
 }
 
 /* profile */
-header .profile-nav-bar {
-  position: absolute;
-  top: 150px;
-  right: 170px;
-  width: 200px;
-  min-height: 100px;
-  background: white;
-  border: 1px solid black;
-  border-radius: 9px;
-  cursor: pointer;
-}
 
 header ul.profile-nav {
   list-style: none;
   font-size: 14px;
+  position: absolute;
+  top: 150px;
+  right: 170px;
+  background: white;
+  z-index: 1000;
+  float: right;
+  padding: 10px 20px;
+  border: 1px solid black;
 }
 header ul.profile-nav li {
   margin: 10px 20px;
+  cursor: pointer;
 }
-
+header ul.profile-nav li.login-btn {
+  opacity: 0.5;
+  color: red;
+  transition: transform 500ms ease;
+}
 
 
 /* shop-cart */

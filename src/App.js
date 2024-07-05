@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Items from "./components/Items";
 import Categories from "./components/Categories";
 import ShowFullItem from "./components/ShowFullItem";
+import ShowLogIn from "./components/ShowLogIn";
 
 class App extends React.Component {
   constructor(props){
@@ -78,25 +79,33 @@ class App extends React.Component {
         }
       ],
       showFullItem: false,
-      fullItem: {}
+      fullItem: {},
+      showLogIn: false,
     }
+    // указание возможности ваимодействия с состоянием и this
     this.state.currentItems = this.state.items
     this.addToOrder = this.addToOrder.bind(this)
     this.deleteOrder = this.deleteOrder.bind(this)
     this.chooseCategory = this.chooseCategory.bind(this)
     this.onShowItem = this.onShowItem.bind(this)
+    this.onShowLogIn = this.onShowLogIn.bind(this)
   }
   render() {
     return(
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} />
+        <Header orders={this.state.orders} onDelete={this.deleteOrder} onShowLogIn={this.onShowLogIn} />
+        {this.state.showLogIn && <ShowLogIn />}
         <div className='catalog__name'>Каталог</div>
         <Categories chooseCategory={this.chooseCategory} />
-        <Items  onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
+        <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
         {this.state.showFullItem && <ShowFullItem onShowItem={this.onShowItem} item={this.state.fullItem} onAdd={this.addToOrder}/>}
         <Footer />
       </div>
     )
+  }
+
+  onShowLogIn(){
+    this.setState({showLogIn: !this.state.showLogIn})
   }
 
   onShowItem(item){

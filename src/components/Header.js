@@ -26,7 +26,8 @@ const showNothing = () => {
 
 export default function Header(props) {
     let [cartOpen, setCartOpen] = useState(false)
-    let [profileOpen, setProfileOpen] = useState(false)
+    let [profileNavOpen, setProfileNavOpen] = useState(false)
+    let [logInOpen, setLogInOpen] = useState(false)
 
   return (
     <header>
@@ -49,16 +50,15 @@ export default function Header(props) {
 
             </div>
             <div>
-                <span onClick={() => setProfileOpen(profileOpen = !profileOpen)} className={`profile-btn ${cartOpen && 'active'}`}><img src={"./img/logo.svg"}/></span>
+                <span onClick={() => setProfileNavOpen(profileNavOpen = !profileNavOpen)} className={`profile-btn ${cartOpen && 'active'}`}><img src={"./img/logo.svg"}/></span>
             </div>
 
-            {
-                profileOpen && (
-                    <div className='profile-nav-bar'>
+            {profileNavOpen && (
+                    <div>
                         <ul className='profile-nav'>
                             <li>Личный кабинет</li>
                             <li>Поддержка</li>
-                            <li>Вход</li>  
+                            <li onClick={() => setLogInOpen(logInOpen = !logInOpen)} className={`login-btn ${logInOpen && 'active'}`}>Вход</li>  
                         </ul>
                     </div>
                 )
