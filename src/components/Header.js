@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import Order from "./Order";
+import ShowLogIn from "./ShowLogIn"
+
+import { IoCloseOutline } from "react-icons/io5";
 
 const showOrders = (props) => {
     let summa=0
@@ -8,7 +11,7 @@ const showOrders = (props) => {
         <div>
         <div className='shop__cart__name'>Корзина</div>
             {props.orders.map(el => (
-                            <Order onDelete={props.onDelete} key={el.id} item={el} />
+                <Order onDelete={props.onDelete} key={el.id} item={el} />
             ))}
             <p className='summa'>Сумма: {new Intl.NumberFormat().format(summa)}Р</p>
         </div>
@@ -23,6 +26,7 @@ const showNothing = () => {
     </div>
     )
 }
+
 
 export default function Header(props) {
     let [cartOpen, setCartOpen] = useState(false)
@@ -60,6 +64,14 @@ export default function Header(props) {
                             <li>Поддержка</li>
                             <li onClick={() => setLogInOpen(logInOpen = !logInOpen)} className={`login-btn ${logInOpen && 'active'}`}>Вход</li>  
                         </ul>
+                        {
+                         logInOpen && (
+                            <div className='login'>
+                                <IoCloseOutline className='close-icon' onClick={() => setLogInOpen(logInOpen = false)}/>
+                                <ShowLogIn />
+                            </div>
+                         )   
+                        }
                     </div>
                 )
             }

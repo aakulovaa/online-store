@@ -79,7 +79,7 @@ class App extends React.Component {
         }
       ],
       showFullItem: false,
-      fullItem: {},
+      fullItem: {}
     }
     // указание возможности ваимодействия с состоянием и this
     this.state.currentItems = this.state.items
@@ -91,7 +91,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} onShowLogIn={this.onShowLogIn} />
+        <Header orders={this.state.orders} onDelete={this.deleteOrder} />
         {this.state.showLogIn && <ShowLogIn />}
         <div className='catalog__name'>Каталог</div>
         <Categories chooseCategory={this.chooseCategory} />
@@ -101,6 +101,7 @@ class App extends React.Component {
       </div>
     )
   }
+
 
   onShowItem(item){
     this.setState({fullItem: item})

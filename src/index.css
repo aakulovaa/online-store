@@ -63,7 +63,8 @@ header .profile-btn {
   color: white;
   cursor: pointer;
 }
-header .profile-btn:hover{
+header .profile-btn:hover,
+header ul.profile-nav li:hover {
   opacity: 0.5;
 }
 
@@ -86,11 +87,59 @@ header ul.profile-nav li {
   cursor: pointer;
 }
 header ul.profile-nav li.login-btn {
-  opacity: 0.5;
-  color: red;
+  color: rgba(255, 0, 0, 0.72);
   transition: transform 500ms ease;
 }
 
+
+/* login */
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 159, 221, 0.8);
+  z-index: 9999;
+  overflow: auto;
+}
+.autorize {
+  width: 500px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 9px;
+}
+.close-icon {
+  float: right;
+  position: fixed;
+  cursor: pointer;
+  background: white;
+  right: 110px;
+  top: 80px;
+  transition: transform 500ms ease;
+  color: red;
+  z-index: 10000;
+}
+.log__titel {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 30px;
+}
+.authoriation_label {
+  margin: 30px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.user_name, .user_password {
+  font-weight: 400;
+  font-size: 14px;
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 30px;
+}
 
 /* shop-cart */
 header .shop-card-btn:active {
