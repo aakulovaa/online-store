@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Order from "./Order";
 import ShowLogIn from "./ShowLogIn"
+import ShowRegister from "./ShowRegister"
+import { CgProfile } from "react-icons/cg";
 
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -32,6 +34,8 @@ export default function Header(props) {
     let [cartOpen, setCartOpen] = useState(false)
     let [profileNavOpen, setProfileNavOpen] = useState(false)
     let [logInOpen, setLogInOpen] = useState(false)
+    let [logOpen, setLogOpen] = useState(false)
+    let [regOpen, setRegOpen] = useState(false)
 
   return (
     <header>
@@ -54,7 +58,7 @@ export default function Header(props) {
 
             </div>
             <div>
-                <span onClick={() => setProfileNavOpen(profileNavOpen = !profileNavOpen)} className={`profile-btn ${cartOpen && 'active'}`}><img src={"./img/logo.svg"}/></span>
+                <CgProfile onClick={() => setProfileNavOpen(profileNavOpen = !profileNavOpen)} className={`profile-btn ${cartOpen && 'active'}`} />
             </div>
 
             {profileNavOpen && (
@@ -68,7 +72,8 @@ export default function Header(props) {
                          logInOpen && (
                             <div className='login'>
                                 <IoCloseOutline className='close-icon' onClick={() => setLogInOpen(logInOpen = false)}/>
-                                <ShowLogIn />
+                                <ShowLogIn onClick={() => setLogOpen(logOpen = !logOpen)} className={`log__titel ${logOpen && 'active'}`}/>
+                                {/* <ShowRegister onClick={() => setRegOpen(regOpen = !regOpen)} className={`reg__titel ${regOpen && 'active'}`}/> */}
                             </div>
                          )   
                         }
@@ -78,7 +83,10 @@ export default function Header(props) {
             
         </div>
         
-        <div className='presentation'> </div>
+        <div className='presentation'> 
+            <img src='img/header.png'></img>
+            <h2>orgtex</h2>
+        </div>
     </header>
   )
 }
