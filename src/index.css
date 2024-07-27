@@ -35,11 +35,14 @@ header .logo:hover{
 }
 header .header__titel{
   background-color: var(--accent-color);
-  height: 100px;
+  height: 50px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
+  position: fixed;
+  z-index: 1000;
 }
 
 header ul.nav {
@@ -73,7 +76,7 @@ header ul.profile-nav li:hover {
 header ul.profile-nav {
   list-style: none;
   font-size: 14px;
-  position: absolute;
+  position: fixed;
   top: 150px;
   right: 170px;
   background: white;
@@ -140,12 +143,7 @@ ul.reg-log-nav li:hover {
 .reg__titel, .log__titel {
   font-weight: 500;
   font-size: 30px;
-
 }
-/* .reg__titel {
-  border-bottom: 3px solid black;
-  width: 200px;
-} */
 .log__titel {
   border-bottom: 3px solid black;
   width: 80px;
@@ -180,7 +178,6 @@ ul.reg-log-nav li:hover {
   cursor: pointer;
 }
 .send:hover {
-
   opacity: 0.5;
 }
 .color__text{
@@ -193,10 +190,10 @@ header .shop-card-btn:active {
 }
 
 header .shop-cart {
-  position: absolute;
+  position: fixed;
   top: 120px;
   left: 0;
-  min-height: 1600px;
+  /* min-height: 1600px; */
   background: white;
   z-index: 1000;
   float: left;
@@ -268,7 +265,7 @@ header .shop-cart .summa {
 
 /* description */
 header .presentation {
-  margin: 1px 0px;
+  margin: 70px 0px;
   background-color: var(--accent-color);
   height: 500px;
   color: white;
