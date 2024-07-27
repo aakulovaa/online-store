@@ -1,33 +1,42 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import ShowLogIn from "./ShowLogIn"
+import { IoCloseOutline } from "react-icons/io5";
 
-export default class Register extends Component {
-  render() {
+export default function Register(props) {
+
+  let [logInOpen, setLogInOpen] = useState(false)
+  let [logOpen, setLogOpen] = useState(false)
+
+
     return (
       <div className='registration'>
-        {/* <ul className='reg-log-nav'>
-            <li className='log__titel'>Вход</li>
-            <li className='reg__titel'>Регистрация</li>
-          </ul> */}
-        <label className='name_label'>Имя</label>
+        <div className='reg__titel'>Регистрация</div>
+        <label className='registration_label'>Имя</label>
         <input className='user_name'></input>
-        <label className='last_name_label'>Фамилия</label>
+        <label className='registration_label'>Фамилия</label>
         <input className='user_last_name'></input>
-        <label className='main_label'>Почта</label>
+        <label className='registration_label'>Почта</label>
         <input className='user_mail'></input>
-        <label className='phone_label'>Телефон</label>
+        <label className='registration_label'>Телефон</label>
         <input className='user_phone'></input>
-        <label className='login_label'>Логин</label>
+        <label className='registration_label'>Логин</label>
         <input className='user_login'></input>
-        <label className='password_label'>Пароль</label>
+        <label className='registration_label'>Пароль</label>
         <input className='user_password'></input>
-        <label className='repeat_password_label'>Повторите пароль</label>
+        <label className='registration_label'>Повторите пароль</label>
         <input className='user_repeat_password'></input>
 
         <div>
-            <button type="submit" class="send">Регистрация</button>
+            <button type="submit" class="send" onClick={() => setLogInOpen(logInOpen = !logInOpen)} className={`send ${logInOpen && 'active'}`}>Регистрация</button>
         </div>
-
+        {
+          logInOpen && (
+            <div className='login'>
+                <IoCloseOutline className='close-icon' onClick={() => setLogInOpen(logInOpen = false)}/>
+                <ShowLogIn onClick={() => setLogOpen(logOpen = !logOpen)} className={`log__titel ${logOpen && 'active'}`}/>
+              </div>
+          )   
+        }
       </div>
     )
-  }
 }

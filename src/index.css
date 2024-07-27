@@ -96,7 +96,8 @@ header ul.profile-nav li.login-btn {
 
 
 /* login */
-.login {
+.login,
+.register{
   position: fixed;
   top: 0;
   left: 0;
@@ -106,7 +107,8 @@ header ul.profile-nav li.login-btn {
   z-index: 9999;
   overflow: auto;
 }
-.autorize {
+.autorize,
+.registration  {
   width: 500px;
   position: relative;
   margin: 10% auto;
@@ -125,7 +127,6 @@ header ul.profile-nav li.login-btn {
   color: red;
   z-index: 10000;
 }
-
 .reg-log-nav {
   list-style: none;
   font-weight: 500;
@@ -140,21 +141,38 @@ header ul.profile-nav li.login-btn {
 ul.reg-log-nav li:hover {
   opacity: 0.5;
 }
-.reg__titel, .log__titel {
+
+.log__titel,
+.reg__titel{
   font-weight: 500;
   font-size: 30px;
+  margin: 30px;
+  text-align: center;
 }
-.log__titel {
-  border-bottom: 3px solid black;
-  width: 80px;
+.forgot_pass{
+  position: relative;
+  right: -350px;
+  top: -50px;
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
-.authoriation_label {
+.authoriation_label,
+.registration_label {
   margin: 30px;
   font-weight: 400;
   font-size: 14px;
 }
-.user_login, .user_password {
+.user_login, 
+.user_password,
+.user_name,
+.user_last_name,
+.user_mail,
+.user_phone,
+.user_repeat_password {
   font-weight: 400;
   font-size: 14px;
   width: 400px;
@@ -162,17 +180,20 @@ ul.reg-log-nav li:hover {
   border-bottom: 1px solid black;
   margin: 30px;
 }
-.agree {
+.agree{
+  position: relative;
   margin: 30px;
   font-weight: 400;
   font-size: 14px;
 }
 .send {
   background-color: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
   color: #ffffff;
-  border-radius: 50%;
+  border-radius: 20%;
   border: none;
-  width: 120px;
+  width: 90%;
   height: 40px;
   margin: 30px;
   cursor: pointer;
@@ -182,6 +203,17 @@ ul.reg-log-nav li:hover {
 }
 .color__text{
   color: var(--accent-color);
+}
+.no_akk{
+  text-align: center;
+}
+.reg-btn{
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
 }
 
 /* shop-cart */

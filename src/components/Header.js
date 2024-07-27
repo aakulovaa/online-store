@@ -71,8 +71,7 @@ export default function Header(props) {
                             <div className='login'>
                                 <IoCloseOutline className='close-icon' onClick={() => setLogInOpen(logInOpen = false)}/>
                                 <ShowLogIn onClick={() => setLogOpen(logOpen = !logOpen)} className={`log__titel ${logOpen && 'active'}`}/>
-                                {/* <ShowRegister onClick={() => setRegOpen(regOpen = !regOpen)} className={`reg__titel ${regOpen && 'active'}`}/> */}
-                            </div>
+                             </div>
                          )   
                         }
                     </div>
