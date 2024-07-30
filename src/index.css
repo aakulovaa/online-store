@@ -141,7 +141,7 @@ header ul.profile-nav li.login-btn {
   color: red;
   z-index: 10000;
 }
-.support .close-icon {
+.support .close-icon{
   top: 155px;
   right: 65px;
 }
@@ -179,7 +179,8 @@ ul.reg-log-nav li:hover {
 }
 
 .authoriation_label,
-.registration_label {
+.registration_label,
+.profile_label {
   margin: 30px;
   font-weight: 400;
   font-size: 14px;
@@ -243,7 +244,11 @@ ul.reg-log-nav li:hover {
 
 .org p,
 .about__box h2, 
-.about__box p  {
+.about__box p,
+.user_profile_name,
+.use_profile_last_name,
+.user_profile_mail,
+.user_profile_phone  {
   font-weight: 400;
   font-size: 14px;
 }
@@ -274,11 +279,55 @@ ul.reg-log-nav li:hover {
   display: inline-block;
   overflow: hidden;
 }
-.org .about__title {
+.org .about__title,
+.user__profile__titel {
   font-weight: 500;
   font-size: 40px;
+  margin-bottom: 30px;
 }
-
+ /* user profile */
+.user_photo {
+  padding: 50px;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+.profile_label {
+  margin-left: 300px;
+  color: gray;
+}
+.profile_all_labels{
+  margin-top: -130px;
+}
+.profile_box {
+  display: block;
+  margin-top: 10px;
+}
+.edit_button {
+  margin-left: 600px;
+  color: var(--accent-color);
+  background-color: #ffffff;
+  border-radius: 25%;
+  width: 250px;
+  height: 30px;
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+.orders_button,
+.returns_button {
+  background-color: var(--accent-color);
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin-top: 30px;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5%;
+}
 
 /* shop-cart */
 header .shop-card-btn:active {
@@ -286,11 +335,11 @@ header .shop-card-btn:active {
 }
 
 header .shop-cart,
-.org {
+.org,
+.user-profile {
   position: fixed;
   top: 70px;
   left: 0;
-  /* min-height: 1600px; */
   background: white;
   z-index: 1000;
   float: left;
@@ -510,7 +559,8 @@ main .add__to__cart:hover,
 }
 
 /* footer */
-.org footer {
+.org footer,
+.user-profile footer {
   margin-left: -150px;
   margin-bottom: 100px;
 }
