@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Order from "./Order";
 import ShowLogIn from "./ShowLogIn"
+import Support from "./Support"
 import { CgProfile } from "react-icons/cg";
 import Orgtex from "./Orgtex";
 import { IoCloseOutline } from "react-icons/io5";
@@ -35,6 +36,7 @@ export default function Header(props) {
     let [logInOpen, setLogInOpen] = useState(false)
     let [logOpen, setLogOpen] = useState(false)
     let [orgOpen, setOrgOpen] = useState(false)
+    let [supportOpen, setSupportOpen] = useState(false)
 
   return (
     <header>
@@ -51,8 +53,8 @@ export default function Header(props) {
             }
             <div>
                 <ul className='nav'>
-                    <li>Главная</li>
-                    <li>Каталог</li>
+                    <li onClick={() => setCartOpen(cartOpen = false)} className={`shop-card-btn ${cartOpen && 'active'}`}>Главная</li>
+                    <li onClick={() => setCartOpen(cartOpen = false)} className={`shop-card-btn ${cartOpen && 'active'}`}>Каталог</li>
                     <li onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-card-btn ${cartOpen && 'active'}`}>Корзина</li>  
                 </ul>
                 {cartOpen && (
@@ -71,12 +73,20 @@ export default function Header(props) {
                     <div>
                         <ul className='profile-nav'>
                             <li>Личный кабинет</li>
-                            <li>Поддержка</li>
+                            <li onClick={() => setSupportOpen(supportOpen = !supportOpen)} className={`support-btn ${supportOpen && 'active'}`}>Поддержка</li>
                             <li onClick={() => setLogInOpen(logInOpen = !logInOpen)} className={`login-btn ${logInOpen && 'active'}`}>Вход</li>  
                         </ul>
                         {
+                         supportOpen && (
+                            <div className='support' onClick={() => setProfileNavOpen(profileNavOpen = false)}>
+                                <IoCloseOutline className='close-icon' onClick={() => setSupportOpen(supportOpen = false)}/>
+                                <Support onClick={() => setSupportOpen(supportOpen = !supportOpen)} className={`support__titel ${supportOpen && 'active'}`}/>
+                             </div>
+                         )   
+                        }
+                         {
                          logInOpen && (
-                            <div className='login'>
+                            <div className='login' onClick={() => setProfileNavOpen(profileNavOpen = false)}>
                                 <IoCloseOutline className='close-icon' onClick={() => setLogInOpen(logInOpen = false)}/>
                                 <ShowLogIn onClick={() => setLogOpen(logOpen = !logOpen)} className={`log__titel ${logOpen && 'active'}`}/>
                              </div>

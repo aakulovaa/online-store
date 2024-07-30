@@ -94,10 +94,24 @@ header ul.profile-nav li.login-btn {
   transition: transform 500ms ease;
 }
 
+.support {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 350px;
+  height: 500px;
+  background-color: #ffffff;
+  z-index: 9999;
+  border: 2px solid black;
+}
+.support__title {
+  text-align: center;
+  background-color: rgba(1, 159, 221, 0.8);
+}
 
 /* login */
 .login,
-.register{
+.register {
   position: fixed;
   top: 0;
   left: 0;
@@ -108,7 +122,7 @@ header ul.profile-nav li.login-btn {
   overflow: auto;
 }
 .autorize,
-.registration  {
+.registration{
   width: 500px;
   position: relative;
   margin: 10% auto;
@@ -126,6 +140,10 @@ header ul.profile-nav li.login-btn {
   transition: transform 500ms ease;
   color: red;
   z-index: 10000;
+}
+.support .close-icon {
+  top: 155px;
+  right: 65px;
 }
 .reg-log-nav {
   list-style: none;
@@ -490,7 +508,6 @@ main .add__to__cart:hover,
 .full-item .add__to__cart:hover {
   transform: scale(1.5) translateY(-5px);
 }
-
 
 /* footer */
 .org footer {
