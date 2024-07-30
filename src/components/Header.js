@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Order from "./Order";
 import ShowLogIn from "./ShowLogIn"
 import { CgProfile } from "react-icons/cg";
-
+import Orgtex from "./Orgtex";
 import { IoCloseOutline } from "react-icons/io5";
 
 const showOrders = (props) => {
@@ -34,13 +34,21 @@ export default function Header(props) {
     let [profileNavOpen, setProfileNavOpen] = useState(false)
     let [logInOpen, setLogInOpen] = useState(false)
     let [logOpen, setLogOpen] = useState(false)
+    let [orgOpen, setOrgOpen] = useState(false)
 
   return (
     <header>
         <div className='header__titel'>
             <div>
-                <span className='logo'>OrgTex</span>
+                <span onClick={() => setOrgOpen(orgOpen = !orgOpen)} className={`logo ${orgOpen && 'active'}`}>OrgTex</span>
             </div>
+            {
+                orgOpen && (
+                <div className='org'>
+                    <Orgtex onClick={() => setOrgOpen(orgOpen = !orgOpen)} className={`org ${logOpen && 'active'}`}/>
+                    </div>
+                )   
+            }
             <div>
                 <ul className='nav'>
                     <li>Главная</li>

@@ -20,13 +20,13 @@ export default function Footer() {
         <div>
             <ul className='socials'>
                 <li>
-                        <img src={"./img/socials-5.svg"}/>
+                        <img src={"./img/socials-5.svg"} alt='vk'/>
                 </li>
                 <li>
-                        <img src={"./img/socials-6.svg"}/>
+                        <img src={"./img/socials-6.svg"} alt='tg'/>
                 </li>
                 <li>
-                        <img src={"./img/socials-7.svg"}/>
+                        <img src={"./img/socials-7.svg"} alt='wa'/>
                 </li>
             </ul>
         </div>
