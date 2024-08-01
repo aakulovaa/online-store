@@ -94,6 +94,7 @@ header ul.profile-nav li.login-btn {
   transition: transform 500ms ease;
 }
 
+/* support chat */
 .support {
   position: fixed;
   right: 50px;
@@ -105,8 +106,70 @@ header ul.profile-nav li.login-btn {
   border: 2px solid black;
 }
 .support__title {
+  width: 50%;
+  position: fixed;
   text-align: center;
-  background-color: rgba(1, 159, 221, 0.8);
+  background-color: rgba(1, 159, 221);
+  color: #ffffff;
+}
+
+.messages {
+  padding: 10px;
+  margin: 5vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.user-photo {
+  width: 40px;
+  border-radius: 50px;
+}
+.message {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.sent{
+  align-self: flex-end;
+}
+
+.message-text {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.new-message-input{
+  width: 220px;
+  border: 2px solid var(--accent-color); 
+  padding: 10px;
+}
+.send-button{
+  background-color:var(--accent-color);
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 30%;
+  width: 80px;
+  height: 25px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.send-button:hover {
+  opacity: 0.5;
+}
+.new-message-form {
+  height: 10vh;
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  /* max-width: 728px; */
+  display: flex;
+  background-color:var(--accent-color);
 }
 
 /* login */
