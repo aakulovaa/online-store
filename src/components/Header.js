@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Order from "./Order";
-import ShowLogIn from "./ShowLogIn"
+import ShowLogIn from "./auth/ShowLogIn"
 import Support from "./Support"
 import Orgtex from "./Orgtex";
-import PrivateOffice from "./UserProfile";
+import PrivateOffice from "./auth/AuthDetails";
 
 import { CgProfile } from "react-icons/cg";
 import { IoCloseOutline } from "react-icons/io5";

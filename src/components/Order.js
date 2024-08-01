@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { FaTrash } from 'react-icons/fa'
 
+// Класс отображения элементов "Корзина"
+
 export default class Order extends Component {
   render() {
     return (

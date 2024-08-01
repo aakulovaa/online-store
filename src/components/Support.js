@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// Класс, описывающий чат поддержки
+
 export default class Support extends Component {
   render() {
     return (

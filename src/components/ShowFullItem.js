@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// Класс ддля отображения всех элементов каталога
+
 export default class ShowFullItem extends Component {
   render() {
     return (

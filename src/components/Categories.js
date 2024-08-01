@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// Класс для разббиения элементов каталога на категории
+
 export default class Categories extends Component {
     constructor(props) {
         super(props)

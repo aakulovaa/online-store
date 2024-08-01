@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+@import url(user_profile.css);
 * {
   margin: 0;
   padding: 0;
@@ -185,7 +185,7 @@ ul.reg-log-nav li:hover {
   font-weight: 400;
   font-size: 14px;
 }
-.user_login, 
+
 .user_password,
 .user_name,
 .user_last_name,
@@ -223,10 +223,15 @@ ul.reg-log-nav li:hover {
 .color__text{
   color: var(--accent-color);
 }
-.no_akk{
+.no_akk,
+.login_with,
+.already_have_akk{
   text-align: center;
+  font-weight: 400;
+  font-size: 14px;
 }
-.reg-btn{
+.reg-btn,
+.log-btn{
   border: none;
   cursor: pointer;
   background-color: #ffffff;
@@ -234,6 +239,11 @@ ul.reg-log-nav li:hover {
   font-weight: 400;
   font-size: 14px;
 }
+.google-icon {
+  margin-left: 50px;
+  cursor: pointer;
+}
+
 
 /* OrgTex */
 .org h2 {
@@ -244,11 +254,7 @@ ul.reg-log-nav li:hover {
 
 .org p,
 .about__box h2, 
-.about__box p,
-.user_profile_name,
-.use_profile_last_name,
-.user_profile_mail,
-.user_profile_phone  {
+.about__box p{
   font-weight: 400;
   font-size: 14px;
 }
@@ -284,49 +290,6 @@ ul.reg-log-nav li:hover {
   font-weight: 500;
   font-size: 40px;
   margin-bottom: 30px;
-}
- /* user profile */
-.user_photo {
-  padding: 50px;
-  margin-top: 10px;
-  border: 1px solid black;
-}
-.profile_label {
-  margin-left: 300px;
-  color: gray;
-}
-.profile_all_labels{
-  margin-top: -130px;
-}
-.profile_box {
-  display: block;
-  margin-top: 10px;
-}
-.edit_button {
-  margin-left: 600px;
-  color: var(--accent-color);
-  background-color: #ffffff;
-  border-radius: 25%;
-  width: 250px;
-  height: 30px;
-  border: 1px solid var(--accent-color);
-  cursor: pointer;
-}
-.orders_button,
-.returns_button {
-  background-color: var(--accent-color);
-  display: block;
-  width: 80%;
-  height: 40px;
-  margin-top: 30px;
-  text-align: left;
-  color: #ffffff;
-  padding-left: 20px;
-  font-weight: 400;
-  font-size: 14px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5%;
 }
 
 /* shop-cart */
@@ -450,7 +413,7 @@ header .presentation img {
 
 /* catalog */
 .categories {
-  padding: 130px 140px;
+  padding: 80px 140px;
   padding-bottom: 20px;
 }
 .categories div {
@@ -481,7 +444,7 @@ main {
   font-size: 40px;
   position: absolute;
   width: 600px;
-  padding: 70px 150px;
+  padding: 20px 150px;
 }
 
 main .item {

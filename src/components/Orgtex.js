@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Footer from "./Footer";
 
+// Класс для отображения страницы с описанием интернет-магазина
+
 export default class Orgtex extends Component {
   render() {
     return (

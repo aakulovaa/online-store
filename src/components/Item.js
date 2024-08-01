@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// Класс отображения элемента каталога интернет-магазина
+
 export class Item extends Component {
   render() {
     return (
