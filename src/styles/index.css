@@ -94,6 +94,11 @@ header ul.profile-nav li.login-btn {
   transition: transform 500ms ease;
 }
 
+.link-to-home {
+  margin-left: 150px;
+  color: var(--accent-color);
+}
+
 /* support chat */
 .support {
   position: fixed;

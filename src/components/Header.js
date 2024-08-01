@@ -8,6 +8,8 @@ import PrivateOffice from "./auth/AuthDetails";
 import { CgProfile } from "react-icons/cg";
 import { IoCloseOutline } from "react-icons/io5";
 
+import { useNavigate } from 'react-router-dom';
+
 const showOrders = (props) => {
     let summa=0
     props.orders.forEach(el => summa += Number.parseInt(el.price))
@@ -41,6 +43,23 @@ export default function Header(props) {
     let [supportOpen, setSupportOpen] = useState(false)
     let [userProfileOpen, setUserProfileOpen] = useState(false)
 
+    const navigate = useNavigate();
+
+    const handleRouteToHomePage = () => {
+        setCartOpen(cartOpen = false)
+        setOrgOpen(orgOpen=false)
+        setUserProfileOpen(userProfileOpen=false)
+        setProfileNavOpen(profileNavOpen=false)
+        navigate("/")
+    }
+    const handleRouteToCatalog = () => {
+        setCartOpen(cartOpen = false)
+        setOrgOpen(orgOpen=false)
+        setUserProfileOpen(userProfileOpen=false)
+        setProfileNavOpen(profileNavOpen=false)
+        navigate("/catalog")
+    }
+
   return (
     <header>
         <div className='header__titel'>
@@ -56,8 +75,8 @@ export default function Header(props) {
             }
             <div>
                 <ul className='nav'>
-                    <li onClick={() => setCartOpen(cartOpen = false)} className={`shop-card-btn ${cartOpen && 'active'}`}>Главная</li>
-                    <li onClick={() => setCartOpen(cartOpen = false)} className={`shop-card-btn ${cartOpen && 'active'}`}>Каталог</li>
+                    <li onClick={handleRouteToHomePage}>Главная</li>
+                    <li onClick={handleRouteToCatalog}>Каталог</li>
                     <li onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-card-btn ${cartOpen && 'active'}`}>Корзина</li>  
                 </ul>
                 {cartOpen && (

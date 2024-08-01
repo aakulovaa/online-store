@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Items from "./components/Items";
-import Categories from "./components/Categories";
-import ShowFullItem from "./components/ShowFullItem";
 import ShowLogIn from "./components/auth/ShowLogIn";
+import Catalog from "./components/Catalog";
 
 class App extends React.Component {
   constructor(props){
@@ -92,11 +90,7 @@ class App extends React.Component {
     return(
       <div className="wrapper">
         <Header orders={this.state.orders} onDelete={this.deleteOrder} />
-        {this.state.showLogIn && <ShowLogIn />}
-        <div className='catalog__name'>Каталог</div>
-        <Categories chooseCategory={this.chooseCategory} />
-        <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
-        {this.state.showFullItem && <ShowFullItem onShowItem={this.onShowItem} item={this.state.fullItem} onAdd={this.addToOrder}/>}
+        <Catalog/>
         <Footer />
       </div>
     )
