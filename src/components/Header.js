@@ -52,13 +52,6 @@ export default function Header(props) {
         setProfileNavOpen(profileNavOpen=false)
         navigate("/")
     }
-    const handleRouteToCatalog = () => {
-        setCartOpen(cartOpen = false)
-        setOrgOpen(orgOpen=false)
-        setUserProfileOpen(userProfileOpen=false)
-        setProfileNavOpen(profileNavOpen=false)
-        navigate("/catalog")
-    }
 
   return (
     <header>
@@ -76,7 +69,6 @@ export default function Header(props) {
             <div>
                 <ul className='nav'>
                     <li onClick={handleRouteToHomePage}>Главная</li>
-                    <li onClick={handleRouteToCatalog}>Каталог</li>
                     <li onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-card-btn ${cartOpen && 'active'}`}>Корзина</li>  
                 </ul>
                 {cartOpen && (
