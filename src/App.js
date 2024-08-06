@@ -12,6 +12,8 @@ class App extends React.Component {
     this.state = {
       orders: [],
       currentItems: [],
+      checkouts: [],
+      returns: [],
       items: [
         {
           id:1,
@@ -87,11 +89,14 @@ class App extends React.Component {
     this.deleteOrder = this.deleteOrder.bind(this)
     this.chooseCategory = this.chooseCategory.bind(this)
     this.onShowItem = this.onShowItem.bind(this)
+    this.addToCheckout = this.addToCheckout.bind(this)
+    this.addToReturns = this.addToReturns.bind(this)
+    this.deleteFromComplOrders = this.deleteFromComplOrders.bind(this)
   }
   render() {
     return(
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} />
+        <Header orders={this.state.orders} checkouts={this.state.checkouts} returns={this.state.returns} onDelete={this.deleteOrder} onAddToBuy={this.addToCheckout} onAddToReturn={this.addToReturns} onDeleteFromCompl={this.deleteFromComplOrders}/>
         <div className='catalog__name'>Каталог</div>
         <Categories chooseCategory={this.chooseCategory} />
         <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
@@ -124,6 +129,10 @@ class App extends React.Component {
     this.setState({orders: this.state.orders.filter(el => el.id !== id)})
   }
 
+  deleteFromComplOrders(id){
+    this.setState({checkouts: this.state.checkouts.filter(el => el.id !== id)})
+  }
+
   addToOrder(item) {
     let isInArray = false
     this.state.orders.forEach(el => {
@@ -133,6 +142,37 @@ class App extends React.Component {
     if(!isInArray)
       this.setState({orders: [...this.state.orders, item]})
   }
+
+  addToCheckout(item) {
+    let isInArray = false
+    this.state.checkouts.forEach(element => {
+      if(element.id === item.id)
+        isInArray = true
+    });
+    if(!isInArray)
+      this.setState({checkouts: [...this.state.checkouts, item]})
+        this.deleteOrder(item.id)
+        new Notification('Товар добавлен в заказы', {
+          tag: 'notif',
+          body: 'Для просмотра заказов перейдите в раздел "Заказы"'
+        })
+  }
+
+  addToReturns(item) {
+    let isInArray = false
+    this.state.returns.forEach(element => {
+      if(element.id === item.id)
+        isInArray = true
+    });
+    if(!isInArray)
+      this.setState({returns: [...this.state.returns, item]})
+        this.deleteFromComplOrders(item.id)
+        new Notification('Вы вернули товар', {
+          tag: 'notif',
+          body: 'Для просмотра возвратов перейдите в раздел "Возвраты"'
+        })
+  }
 }
+
 
 export default App;

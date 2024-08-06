@@ -9,17 +9,42 @@ import { CgProfile } from "react-icons/cg";
 import { IoCloseOutline } from "react-icons/io5";
 
 import { useNavigate } from 'react-router-dom';
+import CompletedOrder from './CompletedOrder';
+import ReturnsOrder from './ReturnsOrder';
+
 
 const showOrders = (props) => {
     let summa=0
+
     props.orders.forEach(el => summa += Number.parseInt(el.price))
     return (
         <div>
         <div className='shop__cart__name'>Корзина</div>
             {props.orders.map(el => (
-                <Order onDelete={props.onDelete} key={el.id} item={el} />
+                <Order onDelete={props.onDelete} onAddToBuy={props.onAddToBuy} key={el.id} item={el} />
             ))}
             <p className='summa'>Сумма: {new Intl.NumberFormat().format(summa)}Р</p>
+            
+        </div>
+    )
+}
+
+const showComplOrders = (props) => {
+    return (
+        <div>
+            {props.checkouts.map(el => (
+                <CompletedOrder onAddToReturn={props.onAddToReturn} onDeleteFromCompl={props.onDeleteFromCompl} onAddToBuy={props.onAddToBuy} key={el.id} item={el} />
+            ))}
+        </div>
+    )
+}
+
+const showReturns = (props) => {
+    return (
+        <div>
+            {props.returns.map(el => (
+                <ReturnsOrder onDeleteFromCompl={props.onDeleteFromCompl} onAddToReturn={props.onAddToReturn} key={el.id} item={el} />
+            ))}
         </div>
     )
 }
@@ -42,6 +67,9 @@ export default function Header(props) {
     let [orgOpen, setOrgOpen] = useState(false)
     let [supportOpen, setSupportOpen] = useState(false)
     let [userProfileOpen, setUserProfileOpen] = useState(false)
+
+    let [ordersOpen, setOrdersOpen] = useState(false)
+    let [returnsOpen, setReturnsOpen] = useState(false)
 
     const navigate = useNavigate();
 
@@ -74,6 +102,22 @@ export default function Header(props) {
                 {cartOpen && (
                     <div className='shop-cart'>
                         {props.orders.length > 0 ? showOrders(props) : showNothing()}
+                         <button onClick={() => setOrdersOpen(ordersOpen = !ordersOpen)} className={`orders_button ${ordersOpen && 'active'}`}>Заказы</button>
+
+                        {ordersOpen && (
+                            <div className='orders'>
+                                 {props.checkouts.length > 0 ? showComplOrders(props) : "Нет оформленных заказов"}
+                            </div>
+                        )
+                        }
+                        <button onClick={() => setReturnsOpen(returnsOpen = !returnsOpen)} className={`returns_button ${returnsOpen && 'active'}`}>Возвраты</button>
+
+                        {returnsOpen && (
+                            <div className='orders'>
+                                 {props.returns.length > 0 ? showReturns(props) : "Нет возвратов"}
+                            </div>
+                        )
+                        }
                     </div>
                 )
                 }
@@ -94,7 +138,7 @@ export default function Header(props) {
                          userProfileOpen && (
                             <div className='user-profile' >
                                 <IoCloseOutline className='close-icon' onClick={() => setUserProfileOpen(userProfileOpen = false)}/>
-                                <PrivateOffice onClick={() => setUserProfileOpen(userProfileOpen = !userProfileOpen)} className={`user__profile__titel ${userProfileOpen && 'active'}`}/>
+                                <PrivateOffice onClick={() => setUserProfileOpen(userProfileOpen = !userProfileOpen)} className={`user__profile__titel ${userProfileOpen && 'active'}`} />
                              </div>
                          )
                         }

@@ -278,7 +278,7 @@ ul.reg-log-nav li:hover {
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
-  border-radius: 20%;
+  border-radius: 50px;
   border: none;
   width: 90%;
   height: 40px;
@@ -379,7 +379,25 @@ header .shop-cart,
   padding: 70px 150px;
 }
 
-header .shop-cart .item {
+.orders_button,
+  .returns_button {
+    background-color: var(--accent-color);
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin-top: 20px;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+  }
+
+header .shop-cart .item,
+.item_orders {
   width: 58%;
   float: left;
   margin-bottom: 20px;
@@ -387,19 +405,26 @@ header .shop-cart .item {
   top: 70px;
 }
 
-header .shop-cart .item img {
+header .shop-cart .item img,
+.item_orders img {
   width: 70px;
   float: left;
   margin-right: 20px;
 }
 
-header .shop-cart .item h2{
+.item_orders {
+  min-height: 100px;
+}
+
+header .shop-cart .item h2,
+.item_orders h2{
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-header .shop-cart .item b{
+header .shop-cart .item b,
+.item_orders b{
   color: black;
   font-weight: 400;
   font-size: 12px;
@@ -412,16 +437,29 @@ header .shop-cart .empty {
   font-size: 20px;
 }
 
-header .shop-cart .item .delete-icon {
+header .shop-cart .item .delete-icon,
+header .shop-cart .item .buy-icon,
+.item_orders .buy-icon {
   float: right;
   position: relative;
   top: -25px;
   cursor: pointer;
   transition: transform 500ms ease;
 }
+header .shop-cart .item .buy-icon,
+.item_orders .buy-icon  {
+  margin-left: 5px;
+  border: 1px solid var(--accent-color);
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 3px 6px;
+  top: -27px;
+}
 
-header .shop-cart .item .delete-icon:hover {
-  transform: scale(1.5);
+header .shop-cart .item .delete-icon:hover,
+header .shop-cart .item .buy-icon:hover,
+.item_orders .buy-icon:hover {
+  transform: scale(1.2);
 }
 
 header .shop-cart .summa {
@@ -439,6 +477,17 @@ header .shop-cart .summa {
   font-weight: 500;
   font-size: 40px;
   position: absolute;
+}
+.go-to-checkout{
+  border: 1px solid var(--accent-color);
+  background-color: #ffffff;
+  float: right;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 570px;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 5px 10px;
 }
 
 /* description */

@@ -6,6 +6,8 @@ import ShowLogIn from "./ShowLogIn"
 
 import { IoCloseOutline } from "react-icons/io5";
 
+
+
 export default function AuthDetails() {
     const [authUser, setAuthUser] = useState(null);
     let [logInOpen, setLogInOpen] = useState(false)
@@ -23,6 +25,7 @@ export default function AuthDetails() {
             listen();
         };
     }, []);
+
     function userSignOut() {
         signOut(auth)
         .then(() => {
@@ -48,9 +51,6 @@ export default function AuthDetails() {
                     <label className='profile_label'>Почта</label>
                     <label className='user_profile_mail'>{authUser.email}</label>
                 </div>
-                {/* <button className='edit_button'>Редактировать</button> */}
-                <button className='orders_button'>Заказы</button>
-                <button className='returns_button'>Возвраты</button>
                 <button onClick={userSignOut} className='logOut-btn'>Выйти</button>
                 <Footer />
             </div>
