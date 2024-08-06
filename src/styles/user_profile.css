@@ -1,0 +1,51 @@
+/* user profile */
+.user_photo {
+    width: 150px;
+    margin-top: 10px;
+    border: 1px solid black;
+    margin-bottom: 270px;
+  }
+  .profile_label {
+    margin-left: 300px;
+    color: gray;
+  }
+  .user_profile_name,
+  .user_profile_mail{
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .profile_all_labels{
+    margin-top: -380px;
+    margin-left: 200px;
+  }
+  .edit_button {
+    margin-top: 70px;
+    color: var(--accent-color);
+    background-color: #ffffff;
+    border-radius: 25%;
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+  }
+
+
+  .desc_signed,
+  .logOut-btn,
+  .logOut__notice {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .logOut-btn {
+    color: red;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
